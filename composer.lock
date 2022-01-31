@@ -841,12 +841,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jafaripur/php-microservice-user-service.git",
-                "reference": "d4b540f061987faaadbd1a0a69e3a949c5099a2b"
+                "reference": "a081293f11cf55cd2572bad994ee638473d889f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jafaripur/php-microservice-user-service/zipball/d4b540f061987faaadbd1a0a69e3a949c5099a2b",
-                "reference": "d4b540f061987faaadbd1a0a69e3a949c5099a2b",
+                "url": "https://api.github.com/repos/jafaripur/php-microservice-user-service/zipball/a081293f11cf55cd2572bad994ee638473d889f0",
+                "reference": "a081293f11cf55cd2572bad994ee638473d889f0",
                 "shasum": ""
             },
             "require": {
@@ -892,7 +892,7 @@
                 "issues": "https://github.com/jafaripur/php-microservice-user-service/issues",
                 "source": "https://github.com/jafaripur/php-microservice-user-service"
             },
-            "time": "2022-01-24T10:59:59+00:00"
+            "time": "2022-01-31T10:20:46+00:00"
         },
         {
             "name": "jean85/pretty-package-versions",

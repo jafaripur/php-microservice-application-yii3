@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Araz\Service\User\UserService;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 use Yiisoft\Definitions\Reference;
@@ -29,14 +30,14 @@ return [
         ],
     ],
 
-    'user-service' => [
+    UserService::class => [
         'class' => \Araz\Service\User\UserService::class,
         '__construct()' => [
             Reference::to('user-service-queue'),
         ],
     ],
 
-    /*'queue' => DynamicReference::to(static function (ContainerInterface $container, LoggerInterface $logger) {
+    /*'user-service-queue' => DynamicReference::to(static function (ContainerInterface $container, LoggerInterface $logger) {
         return new Queue(
             [
                 'dsn' => $_ENV['QUEUE_AMQP_DSN'],

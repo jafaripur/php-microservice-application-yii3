@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Araz\Micro\Commands\UserService;
 
-use Araz\Service\User\UserService;
 use Psr\Container\ContainerInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -27,16 +26,12 @@ final class ListenCommand extends Command
 
     protected function configure(): void
     {
-        $this->addArgument('methods', InputArgument::OPTIONAL | InputArgument::IS_ARRAY, 'Consumer identity to run');
+        $this->addArgument('consumers', InputArgument::OPTIONAL | InputArgument::IS_ARRAY, 'Consumer identity to run');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        /**
-         * @var UserService
-         */
-        $this->container->get('user-service')->listen($input->getArgument('methods'));
-
+        $this->container->get('user-service-queue')->getConsumer()->consume(0, (array)$input->getArgument('consumers'));
         return parent::SUCCESS;
     }
 }
