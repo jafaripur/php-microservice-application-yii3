@@ -1,0 +1,58 @@
+<?php
+
+declare(strict_types=1);
+
+use Psr\Container\ContainerInterface;
+use Psr\Log\LoggerInterface;
+use Yiisoft\Definitions\Reference;
+
+return [
+    'user-service-queue' => [
+        'class' => \Araz\MicroService\Queue::class,
+        '__construct()' => [
+            'micro-test-app',
+            [
+                'dsn' => $_ENV['QUEUE_AMQP_DSN'],
+                'lazy' => true,
+                'persisted' => true,
+                'heartbeat' => 10,
+                "qos_prefetch_count" => 1,
+            ],
+            Reference::to(LoggerInterface::class),
+            Reference::to(ContainerInterface::class),
+            true,
+            true,
+            [
+                Araz\Micro\Queue\Consumer\ConsumerFirst::class,
+                Araz\Micro\Queue\Consumer\ConsumerSecond::class,
+            ],
+        ],
+    ],
+
+    'user-service' => [
+        'class' => \Araz\Service\User\UserService::class,
+        '__construct()' => [
+            Reference::to('user-service-queue'),
+        ],
+    ],
+
+    /*'queue' => DynamicReference::to(static function (ContainerInterface $container, LoggerInterface $logger) {
+        return new Queue(
+            [
+                'dsn' => $_ENV['QUEUE_AMQP_DSN'],
+                'lazy' => true,
+                'persisted' => true,
+                'heartbeat' => 10,
+                "qos_prefetch_count" => 1,
+            ],
+            $logger,
+            $container,
+            true,
+            true,
+            [
+                Araz\Micro\Queue\Consumers\ConsumerFirst::class,
+                Araz\Micro\Queue\Consumers\ConsumerSecond::class,
+            ],
+        );
+    }),*/
+];

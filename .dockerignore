@@ -1,0 +1,11 @@
+/vendor/
+/runtime/
+/.git/
+/lint
+.env.example
+/temp
+/.php-cs-fixer.cache
+
+.merge-plan.php
+
+/rr

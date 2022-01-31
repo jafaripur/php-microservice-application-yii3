@@ -1,0 +1,40 @@
+.merge-plan.php
+
+config/params-local.php
+
+# IDE & OS files
+.*.swp
+.DS_Store
+.buildpath
+.idea
+.project
+.settings
+Thumbs.db
+nbproject
+
+# Binaries
+chkipper.phar
+composer.phar
+ocular.phar
+php-cs-fixer.phar
+phpstan.phar
+phpunit-skelgen.phar
+phpunit.phar
+
+# local config
+/.env
+/.env_test
+/config/env/prod.app.php
+/config/env/dev.app.php
+
+# evolving files
+/vendor
+
+
+# Codeception
+c3.php
+
+/rr
+
+/temp
+/.php-cs-fixer.cache
