@@ -25,7 +25,7 @@ php yii user-service/send-test
 
 ```bash
 
-composer create-project "jafaripur/php-microservice-application dev-master" micro3
+composer create-project "jafaripur/php-microservice-application-yii3 dev-master" micro3
 
 ```
 
