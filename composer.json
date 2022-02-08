@@ -2,7 +2,7 @@
     "name": "jafaripur/php-microservice-application-yii3",
     "type" : "project",
     "description": "php-microservice skeleton console application starter with Yii3 for microservice node",
-    "keywords": ["microservice", "amqp", "rabbitmq", "template", "microservice-starter"],
+    "keywords": ["Yii3", "microservice", "amqp", "rabbitmq", "template", "microservice-starter"],
     "license": "MIT",
     "minimum-stability" : "dev",
     "prefer-stable": true,

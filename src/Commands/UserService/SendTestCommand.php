@@ -30,7 +30,6 @@ final class SendTestCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        
         $output->writeln("Sending async command to UserService::getUserInformation()");
         $userAsyncCommands = $this->userService->commands()->async(5000)
             ->getUserInformation(['id' => '123'], 'cor-test-1234', 2000)
