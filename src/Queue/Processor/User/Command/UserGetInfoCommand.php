@@ -11,11 +11,6 @@ use Psr\Log\LoggerInterface;
 
 final class UserGetInfoCommand extends UserCommand
 {
-    public function __construct(Queue $queue, ProcessorConsumer $processorConsumer, LoggerInterface $logger)
-    {
-        parent::__construct($queue, $processorConsumer);
-    }
-
     public function execute(mixed $body): mixed
     {
         return [
