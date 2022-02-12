@@ -87,12 +87,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Clue\\StreamFilter\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "Clue\\StreamFilter\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -773,12 +773,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jafaripur/php-microservice.git",
-                "reference": "d5d50dec156bf8540c7d21ff135fdf848bcf960c"
+                "reference": "91ab2f4ed58224503a1c49d60c778a15fdcc2e9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jafaripur/php-microservice/zipball/d5d50dec156bf8540c7d21ff135fdf848bcf960c",
-                "reference": "d5d50dec156bf8540c7d21ff135fdf848bcf960c",
+                "url": "https://api.github.com/repos/jafaripur/php-microservice/zipball/91ab2f4ed58224503a1c49d60c778a15fdcc2e9c",
+                "reference": "91ab2f4ed58224503a1c49d60c778a15fdcc2e9c",
                 "shasum": ""
             },
             "require": {
@@ -834,7 +834,7 @@
                 "issues": "https://github.com/jafaripur/php-microservice/issues",
                 "source": "https://github.com/jafaripur/php-microservice"
             },
-            "time": "2022-02-09T11:43:17+00:00"
+            "time": "2022-02-12T15:39:37+00:00"
         },
         {
             "name": "jafaripur/php-microservice-user-service",
@@ -1262,16 +1262,16 @@
         },
         {
             "name": "php-http/message",
-            "version": "1.12.0",
+            "version": "1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/message.git",
-                "reference": "39eb7548be982a81085fe5a6e2a44268cd586291"
+                "reference": "7886e647a30a966a1a8d1dad1845b71ca8678361"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/message/zipball/39eb7548be982a81085fe5a6e2a44268cd586291",
-                "reference": "39eb7548be982a81085fe5a6e2a44268cd586291",
+                "url": "https://api.github.com/repos/php-http/message/zipball/7886e647a30a966a1a8d1dad1845b71ca8678361",
+                "reference": "7886e647a30a966a1a8d1dad1845b71ca8678361",
                 "shasum": ""
             },
             "require": {
@@ -1288,7 +1288,7 @@
                 "ext-zlib": "*",
                 "guzzlehttp/psr7": "^1.0",
                 "laminas/laminas-diactoros": "^2.0",
-                "phpspec/phpspec": "^5.1 || ^6.3",
+                "phpspec/phpspec": "^5.1 || ^6.3 || ^7.1",
                 "slim/slim": "^3.0"
             },
             "suggest": {
@@ -1304,12 +1304,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Http\\Message\\": "src/"
-                },
                 "files": [
                     "src/filters.php"
-                ]
+                ],
+                "psr-4": {
+                    "Http\\Message\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1330,9 +1330,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/message/issues",
-                "source": "https://github.com/php-http/message/tree/1.12.0"
+                "source": "https://github.com/php-http/message/tree/1.13.0"
             },
-            "time": "2021-08-29T09:13:12+00:00"
+            "time": "2022-02-11T13:41:14+00:00"
         },
         {
             "name": "php-http/message-factory",
@@ -2042,23 +2042,23 @@
         },
         {
             "name": "react/promise",
-            "version": "v2.8.0",
+            "version": "v2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "f3cff96a19736714524ca0dd1d4130de73dbbbc4"
+                "reference": "234f8fd1023c9158e2314fa9d7d0e6a83db42910"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/f3cff96a19736714524ca0dd1d4130de73dbbbc4",
-                "reference": "f3cff96a19736714524ca0dd1d4130de73dbbbc4",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/234f8fd1023c9158e2314fa9d7d0e6a83db42910",
+                "reference": "234f8fd1023c9158e2314fa9d7d0e6a83db42910",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^7.0 || ^6.5 || ^5.7 || ^4.8.36"
+                "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8.36"
             },
             "type": "library",
             "autoload": {
@@ -2076,7 +2076,23 @@
             "authors": [
                 {
                     "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com"
+                    "email": "jsorgalla@gmail.com",
+                    "homepage": "https://sorgalla.com/"
+                },
+                {
+                    "name": "Christian Lück",
+                    "email": "christian@clue.engineering",
+                    "homepage": "https://clue.engineering/"
+                },
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "reactphp@ceesjankiewiet.nl",
+                    "homepage": "https://wyrihaximus.net/"
+                },
+                {
+                    "name": "Chris Boden",
+                    "email": "cboden@gmail.com",
+                    "homepage": "https://cboden.dev/"
                 }
             ],
             "description": "A lightweight implementation of CommonJS Promises/A for PHP",
@@ -2086,9 +2102,19 @@
             ],
             "support": {
                 "issues": "https://github.com/reactphp/promise/issues",
-                "source": "https://github.com/reactphp/promise/tree/v2.8.0"
+                "source": "https://github.com/reactphp/promise/tree/v2.9.0"
             },
-            "time": "2020-05-12T15:16:56+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/WyriHaximus",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/clue",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-02-11T10:27:51+00:00"
         },
         {
             "name": "sentry/sdk",
@@ -2253,16 +2279,16 @@
         },
         {
             "name": "spiral/goridge",
-            "version": "v3.1.1",
+            "version": "v3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spiral/goridge-php.git",
-                "reference": "85ad54ae5f3a194330a459b8bd30324764536c2a"
+                "reference": "2c50b649b4296a3733f2ff5de339f41b9db57b04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spiral/goridge-php/zipball/85ad54ae5f3a194330a459b8bd30324764536c2a",
-                "reference": "85ad54ae5f3a194330a459b8bd30324764536c2a",
+                "url": "https://api.github.com/repos/spiral/goridge-php/zipball/2c50b649b4296a3733f2ff5de339f41b9db57b04",
+                "reference": "2c50b649b4296a3733f2ff5de339f41b9db57b04",
                 "shasum": ""
             },
             "require": {
@@ -2273,11 +2299,11 @@
             },
             "require-dev": {
                 "google/protobuf": "^3.17",
+                "infection/infection": "^0.26.1",
                 "jetbrains/phpstorm-attributes": "^1.0",
-                "phpunit/phpunit": "^8.0",
+                "phpunit/phpunit": "^9.5",
                 "rybakit/msgpack": "^0.7",
-                "spiral/code-style": "^1.0",
-                "vimeo/psalm": "^4.6"
+                "vimeo/psalm": "^4.18.1"
             },
             "suggest": {
                 "ext-msgpack": "MessagePack codec support",
@@ -2309,22 +2335,22 @@
             "description": "High-performance PHP-to-Golang RPC bridge",
             "support": {
                 "issues": "https://github.com/spiral/goridge-php/issues",
-                "source": "https://github.com/spiral/goridge-php/tree/v3.1.1"
+                "source": "https://github.com/spiral/goridge-php/tree/v3.1.2"
             },
-            "time": "2021-06-10T12:31:44+00:00"
+            "time": "2022-01-13T08:13:33+00:00"
         },
         {
             "name": "spiral/roadrunner",
-            "version": "v2.7.6",
+            "version": "v2.7.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roadrunner-server/roadrunner.git",
-                "reference": "340c47126a75228fbe38105b8fb7894430495963"
+                "reference": "58b80d16560228d818d0a9e22c195f1ea81ebc27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roadrunner-server/roadrunner/zipball/340c47126a75228fbe38105b8fb7894430495963",
-                "reference": "340c47126a75228fbe38105b8fb7894430495963",
+                "url": "https://api.github.com/repos/roadrunner-server/roadrunner/zipball/58b80d16560228d818d0a9e22c195f1ea81ebc27",
+                "reference": "58b80d16560228d818d0a9e22c195f1ea81ebc27",
                 "shasum": ""
             },
             "require": {
@@ -2350,9 +2376,9 @@
             "description": "RoadRunner: High-performance PHP application server, load-balancer and process manager written in Golang",
             "support": {
                 "issues": "https://github.com/roadrunner-server/roadrunner/issues",
-                "source": "https://github.com/roadrunner-server/roadrunner/tree/v2.7.6"
+                "source": "https://github.com/roadrunner-server/roadrunner/tree/v2.7.8"
             },
-            "time": "2022-02-06T10:01:07+00:00"
+            "time": "2022-02-12T09:39:24+00:00"
         },
         {
             "name": "spiral/roadrunner-cli",
@@ -3299,12 +3325,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -4565,12 +4591,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Yiisoft\\VarDumper\\": "src"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Yiisoft\\VarDumper\\": "src"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -4605,37 +4631,34 @@
         },
         {
             "name": "yiisoft/yii-console",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-console.git",
-                "reference": "adaf69390028231be778095d47793c2ec5b06b91"
+                "reference": "4d9c6e33b3c56a4d3b70c0f7656a8102521ee397"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-console/zipball/adaf69390028231be778095d47793c2ec5b06b91",
-                "reference": "adaf69390028231be778095d47793c2ec5b06b91",
+                "url": "https://api.github.com/repos/yiisoft/yii-console/zipball/4d9c6e33b3c56a4d3b70c0f7656a8102521ee397",
+                "reference": "4d9c6e33b3c56a4d3b70c0f7656a8102521ee397",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4|^8.0",
                 "psr/container": "^1.0|^2.0",
-                "symfony/console": "^5.3",
+                "symfony/console": "^5.3|^6.0",
                 "symfony/event-dispatcher-contracts": "^2.2",
                 "yiisoft/friendly-exception": "^1.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^9.5",
-                "roave/infection-static-analysis-plugin": "^1.9",
+                "roave/infection-static-analysis-plugin": "^1.16",
                 "spatie/phpunit-watcher": "^1.23",
-                "vimeo/psalm": "^4.9",
+                "vimeo/psalm": "^4.18",
                 "yiisoft/test-support": "^1.3"
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                },
                 "config-plugin-options": {
                     "source-directory": "config"
                 },
@@ -4679,7 +4702,7 @@
                     "type": "opencollective"
                 }
             ],
-            "time": "2021-11-01T12:05:23+00:00"
+            "time": "2022-02-11T10:48:19+00:00"
         },
         {
             "name": "yiisoft/yii-event",
@@ -4844,12 +4867,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-runner-console.git",
-                "reference": "816456d38509628621d14d68b3d830aa3f2cb250"
+                "reference": "754144546638fa34bb79eba816257054823bcdbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-runner-console/zipball/816456d38509628621d14d68b3d830aa3f2cb250",
-                "reference": "816456d38509628621d14d68b3d830aa3f2cb250",
+                "url": "https://api.github.com/repos/yiisoft/yii-runner-console/zipball/754144546638fa34bb79eba816257054823bcdbe",
+                "reference": "754144546638fa34bb79eba816257054823bcdbe",
                 "shasum": ""
             },
             "require": {
@@ -4906,7 +4929,7 @@
                     "type": "opencollective"
                 }
             ],
-            "time": "2022-01-28T14:09:22+00:00"
+            "time": "2022-02-10T13:33:39+00:00"
         }
     ],
     "packages-dev": [
@@ -7832,16 +7855,16 @@
         },
         {
             "name": "sebastian/global-state",
-            "version": "5.0.3",
+            "version": "5.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/global-state.git",
-                "reference": "23bd5951f7ff26f12d4e3242864df3e08dec4e49"
+                "reference": "19c519631c5a511b7ed0ad64a6713fdb3fd25fe4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/23bd5951f7ff26f12d4e3242864df3e08dec4e49",
-                "reference": "23bd5951f7ff26f12d4e3242864df3e08dec4e49",
+                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/19c519631c5a511b7ed0ad64a6713fdb3fd25fe4",
+                "reference": "19c519631c5a511b7ed0ad64a6713fdb3fd25fe4",
                 "shasum": ""
             },
             "require": {
@@ -7884,7 +7907,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/global-state/issues",
-                "source": "https://github.com/sebastianbergmann/global-state/tree/5.0.3"
+                "source": "https://github.com/sebastianbergmann/global-state/tree/5.0.4"
             },
             "funding": [
                 {
@@ -7892,7 +7915,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-11T13:31:12+00:00"
+            "time": "2022-02-10T07:01:19+00:00"
         },
         {
             "name": "sebastian/lines-of-code",
