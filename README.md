@@ -1,7 +1,9 @@
 # Microservice Application Skeleton
 
-`Yii3` console application used to write our processors of methods to responsible to client calling.
+![prod-build](https://github.com/jafaripur/php-microservice-application-yii3/actions/workflows/build-prod.yml/badge.svg)
+![test](https://github.com/jafaripur/php-microservice-application-yii3/actions/workflows/run-test.yml/badge.svg)
 
+`Yii3` console application used to write our processors of methods to responsible to client calling.
 
 This application a template for microservice application and implement four methods of [jafaripur/php-microservice](https://github.com/jafaripur/php-microservice). Another library created for using this microservice methods [jafaripur/php-microservice-user-service](https://github.com/jafaripur/php-microservice-user-service).
 
