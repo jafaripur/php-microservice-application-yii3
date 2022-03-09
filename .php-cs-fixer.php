@@ -7,7 +7,7 @@ $finder = PhpCsFixer\Finder::create()
         'docker',
         'runtime',
     ])
-    ->in(__DIR__ . "/../../");
+    ->in(__DIR__);
 
 $config = new PhpCsFixer\Config();
 
