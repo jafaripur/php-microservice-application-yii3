@@ -37,34 +37,34 @@ final class SendTestCommand extends Command
             ->getUserInformation(['id' => '123'], 'cor-test-1236', 2000);
 
         $output->writeln("Sending command to CommandSender::getUserInformation()\n");
-        $result = $this->userService->commands()->getUserInformation(['id' => '123']);
-        $output->writeln(print_r($result, true) . "\n\n");
+        $response = $this->userService->commands()->getUserInformation(['id' => '123']);
+        $output->writeln(print_r($response->getBody(), true) . "\n\n");
 
         $output->writeln("Sending emit to EmitSender::userLoggedIn()\n");
         $msgId = $this->userService->emits()->userLoggedIn(['id' => '123']);
-        $output->writeln(sprintf('Emit message ID: %s', $msgId));
+        $output->writeln(sprintf('Emit message ID: %s', (string)$msgId));
 
 
         $output->writeln(sprintf("Sending topic to TopicSender::userLoggedIn() with routing key: %s", $this->userService->topics()->getRoutingKeyUserTopicCreate()));
         $msgId = $this->userService->topics()->userChanged($this->userService->topics()->getRoutingKeyUserTopicCreate(), ['id' => '123']);
-        $output->writeln(sprintf('Topic message ID: %s', $msgId));
+        $output->writeln(sprintf('Topic message ID: %s', (string)$msgId));
 
         $output->writeln(sprintf("Sending topic to TopicSender::userLoggedIn() with routing key: %s", $this->userService->topics()->getRoutingKeyUserTopicUpdate()));
         $msgId = $this->userService->topics()->userChanged($this->userService->topics()->getRoutingKeyUserTopicUpdate(), ['id' => '123']);
-        $output->writeln(sprintf('Topic message ID: %s', $msgId));
+        $output->writeln(sprintf('Topic message ID: %s', (string)$msgId));
 
 
         $output->writeln("Sending worker to WorkerSender::userProfileAnalysis()");
         $msgId = $this->userService->workers()->userProfileAnalysis(['id' => '123']);
-        $output->writeln(sprintf('Worker message ID: %s', $msgId));
+        $output->writeln(sprintf('Worker message ID: %s', (string)$msgId));
 
         $output->writeln("Sending worker to WorkerSender::userProfileUpdateNotification()");
         $msgId = $this->userService->workers()->userProfileUpdateNotification(['id' => '1234']);
-        $output->writeln(sprintf('Worker message ID: %s', $msgId));
+        $output->writeln(sprintf('Worker message ID: %s', (string)$msgId));
 
         $output->writeln("Receiving async command from UserService::getUserInformation ...");
-        foreach ($userAsyncCommands->receive() as $correlationId => $data) {
-            $output->writeln(print_r([$correlationId => $data], true));
+        foreach ($userAsyncCommands->receive() as $correlationId => $response) {
+            $output->writeln(print_r([$correlationId => $response->getBody()], true));
         }
 
         return parent::SUCCESS;

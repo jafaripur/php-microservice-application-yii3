@@ -5,10 +5,11 @@ declare(strict_types=1);
 namespace Araz\Micro\Queue\Processor\User\Emit;
 
 use Araz\Micro\Queue\Processor\User\UserEmit;
+use Araz\MicroService\Processors\RequestResponse\Request;
 
 final class UserLoggedInEmit extends UserEmit
 {
-    public function execute(mixed $body): void
+    public function execute(Request $request): void
     {
         // Emit received with topic user_logged_in
     }
