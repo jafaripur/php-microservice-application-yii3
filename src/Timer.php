@@ -16,7 +16,7 @@ final class Timer
     public function get(string $name): float
     {
         if (!array_key_exists($name, $this->timers)) {
-            throw new \InvalidArgumentException("There is no \"$name\" timer started");
+            throw new \InvalidArgumentException("There is no \"{$name}\" timer started");
         }
 
         return microtime(true) - (float)$this->timers[$name];

@@ -17,7 +17,7 @@ return [
                 'lazy' => true,
                 'persisted' => true,
                 'heartbeat' => 10,
-                "qos_prefetch_count" => 1,
+                'qos_prefetch_count' => 1,
             ],
         ],
     ],

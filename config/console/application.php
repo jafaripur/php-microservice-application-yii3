@@ -7,11 +7,10 @@ use Psr\EventDispatcher\ListenerProviderInterface;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\EventDispatcher\Dispatcher\Dispatcher;
 use Yiisoft\EventDispatcher\Provider\Provider;
-
 use Yiisoft\EventDispatcher\Provider\ListenerCollection;
 use Yiisoft\Yii\Event\ListenerCollectionFactory as Factory;
 
-/** @var array $params */
+// @var array $params
 
 return [
     EventDispatcherInterface::class => Dispatcher::class,

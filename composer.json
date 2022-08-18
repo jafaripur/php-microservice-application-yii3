@@ -21,7 +21,7 @@
         "docs": "https://github.com/jafaripur/php-microservice-application-yii3/blob/master/README.md"
     },
     "require": {
-        "php" : "^8.0",
+        "php" : "^8.1",
         "yiisoft/yii-console": "^1.0",
         "yiisoft/yii-runner-console": "dev-master",
         "yiisoft/config": "^1.0",

@@ -19,17 +19,18 @@ final class ConsumerFirst extends ProcessorConsumer
      */
     public function getProcessors(): Generator
     {
-        //Command
+        // Command
         yield \Araz\Micro\Queue\Processor\User\Command\UserGetInfoCommand::class;
 
-        //Emits
+        // Emits
         yield \Araz\Micro\Queue\Processor\User\Emit\UserLoggedInEmit::class;
 
-        //Topics
+        // Topics
         yield \Araz\Micro\Queue\Processor\User\Topic\UserCreatedTopic::class;
 
-        //Workers
+        // Workers
         yield \Araz\Micro\Queue\Processor\User\Worker\UserProfileAnalysisWorker::class;
+
         yield \Araz\Micro\Queue\Processor\User\Worker\UserProfileUpdateNotificationWorker::class;
     }
 }

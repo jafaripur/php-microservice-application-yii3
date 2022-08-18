@@ -13,6 +13,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 final class ListenCommand extends Command
 {
     protected static $defaultName = 'user-service/listen';
+
     protected static $defaultDescription = 'Listen on user-service queues';
 
     private ContainerInterface $container;
@@ -32,6 +33,7 @@ final class ListenCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->container->get('user-service-queue')->getConsumer()->consume(0, (array)$input->getArgument('consumers'));
+
         return parent::SUCCESS;
     }
 }

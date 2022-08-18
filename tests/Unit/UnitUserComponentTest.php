@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Araz\Micro\Tests\Unit;
 
 use Araz\Micro\Test\UserComponent;
-use Araz\Micro\Tests\UnitTester;
 
 final class UnitUserComponentTest extends \Codeception\Test\Unit
 {

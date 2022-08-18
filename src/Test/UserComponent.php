@@ -7,11 +7,7 @@ namespace Araz\Micro\Test;
 final class UserComponent
 {
     /**
-     * Two number addition
-     *
-     * @param  float $a
-     * @param  float $b
-     * @return float
+     * Two number addition.
      */
     public function add(float $a, float $b): float
     {
